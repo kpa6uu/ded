@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "Твой обаятельный дед",
+    "version": "1.0",
+
+    "icons": {
+        "16": "16x16.png",
+        "32": "32x32.png",
+        "48": "48x48.png",
+        "128": "128x128.png"
+    },
+
+    "permissions": [
+        "http://vk.com/*",
+         "https://vk.com/*"
+    ],
+
+    "browser_action": {
+        "default_title": "Привет! Я - Дед!"
+    },
+    
+    "content_scripts": [
+        {
+          "matches": ["https://vk.com/*","http://vk.com/*"],
+          "js": ["ded.js"]
+        }
+    ]
+}
